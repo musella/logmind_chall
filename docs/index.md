@@ -86,6 +86,7 @@ and similar instances.
 
 Further details on the investigation process can be found below.
 
+_(click on the image below to open the dashboard)_
 [![dashboard_thumb.png](/logmind_chall/assets/dashboard_thumb.png)](/logmind_chall/assets/dashboard.html){:target="_blank"}
 
 ## Preprocessing and cleanup
