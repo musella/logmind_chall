@@ -242,6 +242,11 @@ While on the single time-slice the use of a recurrent network do not qualitative
 the accuracy of the model, the ability to exploit the temporal information, and to model
 sequence of data samples make the recurrent approach worth pursuing further.
 
+The training code is available
+[here](https://github.com/musella/logmind_chall/blob/master/notebooks/train_autoencoder.ipynb) 
+and
+[here](https://github.com/musella/logmind_chall/blob/master/notebooks/train_rnn.ipynb).
+
 
 ## Outlook
 
