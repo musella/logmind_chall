@@ -86,7 +86,7 @@ and similar instances.
 
 Further details on the investigation process can be found below.
 
-[![dashboard_thumb.png](/assets/dashboard_thumb.png)](/assets/dashboard.html){:target="_blank"}
+[![dashboard_thumb.png](/logmind_chall/assets/dashboard_thumb.png)](/logmind_chall/assets/dashboard.html){:target="_blank"}
 
 ## Preprocessing and cleanup
 
@@ -181,7 +181,7 @@ I trained two neural-network based models:
 Autoencoders are neural network trained to reproduced their input, but structured in such
 a way that they are forced to perform dimensionality reduction.
 
-![autoencoder.png](/assets/autoencoder.png){:width="50%"}
+![autoencoder.png](/logmind_chall/assets/autoencoder.png){:width="50%"}
 
 A way to apply them to anomaly detection algorithms is to train them on normal data and
 then use the reconstruction error as an anomaly score. At training time, in fact, the
@@ -204,7 +204,7 @@ standardisation), finding comparable results.
 
 The figure below shows the distribution of the reconstruction error for the training and
 test set.
-![reconstruction_error.png](/assets/reconstruction_error.png)
+![reconstruction_error.png](/logmind_chall/assets/reconstruction_error.png)
 
 Based on this distribution, the model does signal anomalous events. In the following, I
 nevertheless set an "anomaly warning threshold" at 200.
@@ -214,7 +214,7 @@ cause of the anomaly. In particular I looked at the difference between the rate 
 the categories and the corresponding prediction. Sorting the categories by the absolute
 deviation, one can identify the suspicious rates.
 
-![causes.png](/assets/causes.png){:width="60%"}
+![causes.png](/logmind_chall/assets/causes.png){:width="60%"}
 
 ### RNN
 
@@ -224,7 +224,7 @@ exploiting a recurrent neural network, based on GRU units.
 In particular, I trained a so called many-to-one model, i.e. a model mapping a sequence of
 samples to a single instance. 
 
-![autoencoder.png](/assets/rnn.png){:width="50%"}
+![autoencoder.png](/logmind_chall/assets/rnn.png){:width="50%"}
 
 The network was trained on sequences made by 30 time slices to predict the even rate in
 the 31st slice. Each input was fed into a dense layer reducing the dimensionality of each
@@ -236,7 +236,7 @@ network (from 1.05 to 0.95 on the validation set). On the other hand, the two ne
 give very similar reconstruction errors on the test set, especially for what concerns the
 outliers. 
 
-![reconstruction_error_scatter.png](/assets/reconstruction_error_scatter.png)
+![reconstruction_error_scatter.png](/logmind_chall/assets/reconstruction_error_scatter.png)
 
 While on the single time-slice the use of a recurrent network do not qualitative change
 the accuracy of the model, the ability to exploit the temporal information, and to model
