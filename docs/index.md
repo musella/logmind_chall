@@ -72,7 +72,8 @@ only for the second  part of the dataset, which was not used for training.
 
 For events above a "warning threshold", an analysis of the model output was performed to
 **identify** the possible **sources of anomaly**. The result of such analysis are visualised by
-the dashboard as the mouse hovers over the data points.
+the dashboard as the mouse hovers over the data points, and marked by red markers on the
+corresponding time series.
 
 Given the limited size of the dataset, the model has **limited predictive power**. The events
 that were identified most clearly as **anomalous** were related to some **data deletion** that
